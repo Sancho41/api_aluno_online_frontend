@@ -62,7 +62,7 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     // baseURL: "https://api-aluno-online.herokuapp.com",
-    baseURL: "http://127.0.0.1:8080"
+    baseURL: process.env.API_HOST || "http://127.0.0.1:8080"
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
