@@ -11,13 +11,12 @@
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/vuetify": "^1.11.2",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "vue-sweetalert2": "^4.1.1"
   },
-  "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.2"
-  },
+  "devDependencies": {},
   "engines": {
     "node": "12.18.2",
     "yarn": "1.22.5"
