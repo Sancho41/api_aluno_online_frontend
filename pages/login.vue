@@ -2,14 +2,15 @@
   <v-container fill-height>
     <v-row align="center">
       <v-col>
-        <v-card width="300" id="card" :loading="loading">
+        <v-card width="300" id="card" :loading="loading" elevation="8">
           <v-card-title>Login</v-card-title>
           <v-card-text>
-            <v-form>
+            <v-form @submit.prevent="login">
               <v-text-field
                 label="Email"
                 v-model="loginForm.email"
                 :disabled="loading"
+                @keyup.enter="login"
               />
               <v-text-field
                 label="Senha"
@@ -18,6 +19,7 @@
                 :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
                 @click:append="showPassword = !showPassword"
                 :disabled="loading"
+                @keyup.enter="login"
               />
             </v-form>
           </v-card-text>

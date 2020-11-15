@@ -21,6 +21,7 @@
             :type="showSenha ? 'text' : 'password'"
             :append-icon="showSenha ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showSenha = !showSenha"
+            @keyup.enter="login"
           />
           <v-text-field
             label="Chave"
@@ -29,6 +30,7 @@
             :type="showChave ? 'text' : 'password'"
             :append-icon="showChave ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showChave = !showChave"
+            @keyup.enter="login"
           />
         </v-form>
       </v-card-text>

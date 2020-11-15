@@ -1,95 +1,199 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+  <v-container
+    fluid
+    style="background: white"
+    fill-height
+    class="container-main"
+  >
+    <div class="banner">
+      <p>A teoria, prática e um sistema decente!</p>
+    </div>
+
+    <div class="body">
+      <div class="header">
+        <img class="logo" src="~/assets/logo.png" alt="" />
+        <div class="text">
+          <div class="title">
+            <span>API</span>
+            <span>Aluno</span>
+            <span>Online</span>
           </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          <div class="buttons">
+            <v-btn
+              elevation="0"
+              color="#fe0000"
+              x-large
+              href="https://documenter.getpostman.com/view/10262250/TVep97qn"
+              target="_blank"
+              dark
+              >Documentação</v-btn
+            >
+            <v-btn
+              outlined
+              color="#fe0000"
+              x-large
+              @click="$router.push('/dashboard')"
+              >Demo</v-btn
+            >
+            <v-btn
+              outlined
+              color="#24292e"
+              x-large
+              href="https://github.com/Sancho41/api_aluno_online"
+              target="_blank"
+              >Github<v-icon>mdi-github</v-icon></v-btn
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="infos">
+        <div class="info-text-container">
+          <h3 class="info-title">Teste</h3>
+          <p class="info-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut
+            labore pariatur rerum.
+          </p>
+        </div>
+        <div class="info-text-container">
+          <h3 class="info-title">Teste</h3>
+          <p class="info-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut
+            labore pariatur rerum.
+          </p>
+        </div>
+        <div class="info-text-container">
+          <h3 class="info-title">Teste</h3>
+          <p class="info-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut
+            labore.
+          </p>
+        </div>
+      </div>
+
+      <div class="darker" ref="tecs">
+        <h2 class="section-title" :class="passedTecs ? 'no-filter' : ''">
+          Tecnologias
+        </h2>
+        <div class="tec-logos">
+          <figure @click="goto('https://kotlinlang.org/')">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg"
+              :class="passedTecs ? 'no-filter' : ''"
+            />
+            <small>kotlin</small>
+          </figure>
+
+          <figure @click="goto('https://ktor.io/')">
+            <img
+              :class="passedTecs ? 'no-filter' : ''"
+              src="https://avatars1.githubusercontent.com/u/28214161?s=280&v=4"
+            />
+            <small>Ktor</small>
+          </figure>
+
+          <figure @click="goto('https://vuejs.org/')">
+            <img
+              :class="passedTecs ? 'no-filter' : ''"
+              src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+            />
+            <small>Vue.js</small>
+          </figure>
+
+          <figure @click="goto('https://vuetifyjs.com')">
+            <img
+              :class="passedTecs ? 'no-filter' : ''"
+              src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-light.png"
+            />
+            <small>Vuetify</small>
+          </figure>
+
+          <figure @click="goto('https://www.jetbrains.com/pt-br/idea/')">
+            <img
+              :class="passedTecs ? 'no-filter' : ''"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/IntelliJ_IDEA_Logo.svg/1024px-IntelliJ_IDEA_Logo.svg.png"
+            />
+            <small>Intellij</small>
+          </figure>
+
+          <figure @click="goto('https://www.mongodb.com/')">
+            <img
+              :class="passedTecs ? 'no-filter' : ''"
+              src="https://img.icons8.com/color/452/mongodb.png"
+            />
+            <small>MongoDB</small>
+          </figure>
+        </div>
+      </div>
+
+      <div class="developers">
+        <h2 class="section-title">Desenvolvedores</h2>
+        <div class="developers-container">
+          <div class="developer" @click="goto('https://github.com/Sancho41')">
+            <img src="https://github.com/Sancho41.png?size=200" />
+            <p>Gabriel Sancho</p>
+          </div>
+
+          <div
+            class="developer"
+            @click="goto('https://github.com/Vinicius-Andrade1')"
           >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
+            <img src="https://github.com/Vinicius-Andrade1.png?size=200" />
+            <p>Vinícius Andrade</p>
+          </div>
+
+          <div class="developer" @click="goto('https://github.com/raulc00')">
+            <img src="https://github.com/raulc00.png?size=200" />
+            <p>Raul Carneiro</p>
+          </div>
+
+          <div
+            class="developer"
+            @click="goto('https://github.com/emanuelfelipe')"
           >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+            <img src="https://github.com/emanuelfelipe.png?size=200" />
+            <p>Emanuel Felipe</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer darker">
+        <p>
+          Released under the
+          <a href="https://opensource.org/licenses/MIT">MIT License</a>
+        </p>
+      </div>
+    </div>
+  </v-container>
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
-import VuetifyLogo from "~/components/VuetifyLogo.vue";
-
 export default {
   auth: false,
   layout: "clean",
-  components: {
-    Logo,
-    VuetifyLogo,
+  data() {
+    return {
+      passedTecs: false,
+    };
+  },
+  mounted() {
+    window.onscroll = (event) => {
+      const tecs = this.$refs["tecs"].offsetTop;
+      const position = window.scrollY;
+      const height = window.innerHeight / 2;
+      this.passedTecs = position > tecs - height;
+    };
+  },
+  methods: {
+    goto(url) {
+      console.log({ url });
+      window.open(url, "_blank");
+    },
   },
 };
 </script>
+
+<style scoped lang="scss">
+@import "~/assets/index.scss";
+</style>

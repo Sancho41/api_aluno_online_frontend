@@ -2,7 +2,7 @@
   <v-container fill-height>
     <v-row align="center">
       <v-col>
-        <v-card width="300" id="card" :loading="loading">
+        <v-card width="300" id="card" :loading="loading" elevation="8">
           <v-card-title>Register</v-card-title>
           <v-card-text>
             <v-form

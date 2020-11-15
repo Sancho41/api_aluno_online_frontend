@@ -2,12 +2,12 @@
   <v-card :loading="loading">
     <v-card-title>
       <div class="header">
-        {{ title }}
+        <span class="teko">{{ title }}</span>
         <v-btn :disabled="loading" color="success" @click="makeRequest"
           >consultar</v-btn
         >
       </div>
-      <small>Endpoint: {{ url }}</small>
+      <small><strong>Endpoint:</strong> {{ url }}</small>
 
       <div class="icon" v-if="data">
         <v-icon @click="show = false" v-if="show">mdi-arrow-up</v-icon>

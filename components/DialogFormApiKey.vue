@@ -16,6 +16,7 @@
             hint="Sua matrícula do Aluno Online"
             :persistent-hint="true"
             v-model="generateForm.matricula"
+            @keyup.enter="gerar"
           />
           <v-text-field
             :disabled="loading"
@@ -26,6 +27,7 @@
             :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showPassword = !showPassword"
             :type="showPassword ? 'text' : 'password'"
+            @keyup.enter="gerar"
           />
         </v-card-text>
         <v-card-actions>
