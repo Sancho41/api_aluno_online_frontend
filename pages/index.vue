@@ -11,7 +11,7 @@
 
     <div class="body">
       <div class="header">
-        <img class="logo" src="~/assets/logo.png" alt="" />
+        <img class="logo" src="/logo.png" alt="" />
         <div class="text">
           <div class="title">
             <span>API</span>
@@ -171,7 +171,6 @@
 <script>
 export default {
   auth: false,
-  layout: "clean",
   data() {
     return {
       passedTecs: false,

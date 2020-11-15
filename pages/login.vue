@@ -44,7 +44,6 @@
 import Notify from "~/plugins/Notify.js";
 export default {
   auth: "guest",
-  layout: "clean",
   data() {
     return {
       loginForm: {

@@ -17,9 +17,10 @@
   background: #fe0000;
   padding: 10px 20px;
   font-size: 0.8em;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
+  width: 100%;
 }
 
 .banner p {
@@ -316,6 +317,10 @@
 }
 
 @media (max-width: 500px) {
+  .banner {
+    display: none;
+  }
+
   .header {
     flex-wrap: wrap;
     padding: 50px 0;

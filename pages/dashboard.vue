@@ -15,6 +15,7 @@
 <script>
 import DialogFormApiKey from "~/components/DialogFormApiKey.vue";
 export default {
+  layout: "appDrawer",
   components: { DialogFormApiKey },
   computed: {
     user() {

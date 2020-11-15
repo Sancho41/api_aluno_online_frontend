@@ -22,6 +22,7 @@
 import Request from "~/components/Request.vue";
 import DialogLoginWithKey from "~/components/DialogLoginWithKey.vue";
 export default {
+  layout: "appDrawer",
   components: { Request, DialogLoginWithKey },
   data() {
     return {
