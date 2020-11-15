@@ -2,7 +2,7 @@
   <v-app dark>
     <v-navigation-drawer v-model="drawer" app>
       <v-list style="background-color: white">
-        <v-list-item>
+        <v-list-item @click="$router.push('/')">
           <v-list-item-content>
             <v-list-item-title>
               <img class="logo" src="/logo.png" alt="" />

@@ -159,10 +159,7 @@
       </div>
 
       <div class="footer darker">
-        <p>
-          Released under the
-          <a href="https://opensource.org/licenses/MIT">MIT License</a>
-        </p>
+        <p>Criado com ❤️ por programadores para programadores!</p>
       </div>
     </div>
   </v-container>
