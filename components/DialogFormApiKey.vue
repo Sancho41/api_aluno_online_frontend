@@ -88,12 +88,12 @@ export default {
         this.dialog = false;
         this.dialogKey = true;
       } catch (error) {
+        const msg = error.response.data.detailMessage || "Ocorreu algum erro!";
+        Notify.error(msg, "Não foi possível fazer o login no Aluno Online.");
         console.log({ error });
       } finally {
         this.loading = false;
       }
-      this.dialog = false;
-      this.dialogKey = true;
     },
 
     fecharDialogKey() {
