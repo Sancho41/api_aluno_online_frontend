@@ -22,6 +22,8 @@
             :append-icon="showSenha ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showSenha = !showSenha"
             @keyup.enter="login"
+            hint="Sua senha do sistema"
+            persistent-hint
           />
           <v-text-field
             label="Chave"
@@ -31,6 +33,8 @@
             :append-icon="showChave ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showChave = !showChave"
             @keyup.enter="login"
+            hint="Sua chave gerada para o Aluno Online"
+            persistent-hint
           />
         </v-form>
       </v-card-text>

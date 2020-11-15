@@ -36,7 +36,7 @@
 .header {
   display: flex;
   justify-content: center;
-  padding: 150px 0;
+  padding: 150px 0 0;
 }
 
 .text {
@@ -110,6 +110,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 100px 0;
 }
 
 .body .darker {
@@ -324,6 +325,10 @@
   .header {
     flex-wrap: wrap;
     padding: 50px 0;
+  }
+
+  .infos {
+    padding: 0;
   }
 
   .title {

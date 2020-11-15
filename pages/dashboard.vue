@@ -2,9 +2,10 @@
   <v-container>
     <v-card>
       <v-card-text>
-        <p>Email: {{ user.email }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
         <p>
-          Matrícula: {{ user.matricula || "'Matrícula ainda não registrada'" }}
+          <strong>Matrícula:</strong>
+          {{ user.matricula || "'Matrícula ainda não registrada'" }}
         </p>
         <dialog-form-api-key />
       </v-card-text>
