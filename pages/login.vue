@@ -63,8 +63,7 @@ export default {
         this.$router.push("/dashboard");
       } catch (e) {
         const msg =
-          e.response.data.detailMessage ||
-          "Não foi possível registrar usuário!";
+          e.response?.data?.message || "Não foi possível registrar usuário!";
         Notify.error(msg);
         console.error({ e });
       } finally {

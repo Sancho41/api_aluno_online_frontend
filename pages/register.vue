@@ -85,7 +85,7 @@ export default {
         this.$router.push("/login");
       } catch (e) {
         const msg =
-          e.response.data.detailMessage || "Não foi possível fazer o login!";
+          e.response?.data?.message || "Não foi possível fazer o login!";
         Notify.error(msg);
         console.error({ e });
       } finally {

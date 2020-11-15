@@ -57,10 +57,10 @@ export default {
         this.show = true;
       } catch (error) {
         console.log({ error });
-        Notify.error(
-          "Verifique suas credencias do aluno online e sua chave de api!",
-          "Não foi possível acessar recurso"
-        );
+        const msg =
+          error.response?.data.message ||
+          "Verifique suas credencias do aluno online e sua chave de api!";
+        Notify.error(msg, "Não foi possível acessar recurso");
       } finally {
         this.loading = false;
       }

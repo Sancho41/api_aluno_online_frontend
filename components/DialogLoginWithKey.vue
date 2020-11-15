@@ -84,7 +84,7 @@ export default {
         Notify.successToast("Logado com sucesso!");
       } catch (error) {
         console.log({ error });
-        const msg = error.response?.data.detailMessage || "Ocorreu algum erro";
+        const msg = error.response?.data.message || "Ocorreu algum erro";
         Notify.error(msg);
       } finally {
         this.loading = false;
