@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap");
 
 .teko {
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
+}
+
+#swal2-content,
+#swal2-title,
+.swal2-confirm,
+.swal2-cancel {
+  font-family: "Roboto", sans-serif;
 }

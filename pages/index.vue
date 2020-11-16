@@ -27,7 +27,7 @@
               href="https://documenter.getpostman.com/view/10262250/TVep97qn"
               target="_blank"
               dark
-              >Documentação</v-btn
+              >Documentação <v-icon>mdi-document</v-icon></v-btn
             >
             <v-btn
               outlined

@@ -1,15 +1,27 @@
 <template>
   <v-container>
-    <v-card>
-      <v-card-text>
-        <p><strong>Email:</strong> {{ user.email }}</p>
-        <p>
-          <strong>Matrícula:</strong>
-          {{ user.matricula || "'Matrícula ainda não registrada'" }}
-        </p>
-        <dialog-form-api-key />
-      </v-card-text>
-    </v-card>
+    <v-row>
+      <v-col>
+        <v-card>
+          <v-card-title>Instruções:</v-card-title>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col>
+        <v-card>
+          <v-card-text>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p>
+              <strong>Matrícula:</strong>
+              {{ user.matricula || "'Matrícula ainda não registrada'" }}
+            </p>
+            <dialog-form-api-key />
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
