@@ -11,7 +11,7 @@
 
     <div class="body">
       <div class="header">
-        <img class="logo" src="/logo.png" alt="" />
+        <img class="logo" src="/logo.png" alt="Logo IESB" />
         <div class="text">
           <div class="title">
             <span>API</span>
@@ -186,6 +186,9 @@ export default {
       console.log({ url });
       window.open(url, "_blank");
     },
+  },
+  beforeDestroy() {
+    window.onscroll = null;
   },
 };
 </script>

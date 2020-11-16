@@ -1,54 +1,64 @@
 <template>
-  <v-container fill-height>
-    <v-row align="center">
-      <v-col>
-        <v-card width="300" id="card" :loading="loading" elevation="8">
-          <v-card-title>Register</v-card-title>
-          <v-card-text>
-            <v-form
-              ref="register"
-              @submit.prevent="register"
-              :lazy-validation="true"
-              v-model="valid"
+  <v-row align="center" style="max-width: 100vw; margin: 0 auto">
+    <v-col>
+      <v-card width="300" id="card" :loading="loading" elevation="8">
+        <v-card-title>Registrar</v-card-title>
+        <v-card-text>
+          <v-form
+            ref="register"
+            @submit.prevent="register"
+            :lazy-validation="true"
+            v-model="valid"
+          >
+            <input style="display: none" />
+            <v-text-field
+              label="Email"
+              v-model="registerForm.email"
+              :disabled="loading"
+              :rules="registerRules.email"
+              type="email"
+              autocomplete="new-password"
+              @keyup.enter="register"
+            />
+            <input style="display: none" />
+            <v-text-field
+              label="Senha"
+              v-model="registerForm.senha"
+              :type="showPassword ? 'text' : 'password'"
+              :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+              @click:append="showPassword = !showPassword"
+              :disabled="loading"
+              :rules="registerRules.senha"
+              autocomplete="new-password"
+              @keyup.enter="register"
+            />
+          </v-form>
+        </v-card-text>
+        <v-card-actions>
+          <div id="footer">
+            <v-btn color="success" @click="register" :disabled="loading"
+              >Registrar</v-btn
             >
-              <v-text-field
-                label="Email"
-                v-model="registerForm.email"
-                :disabled="loading"
-                :rules="registerRules.email"
-                type="email"
-              />
-              <v-text-field
-                label="Senha"
-                v-model="registerForm.senha"
-                :type="showPassword ? 'text' : 'password'"
-                :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-                @click:append="showPassword = !showPassword"
-                :disabled="loading"
-                :rules="registerRules.senha"
-              />
-            </v-form>
-          </v-card-text>
-          <v-card-actions>
-            <div id="footer">
-              <v-btn color="success" @click="register" :disabled="loading"
-                >Registrar</v-btn
-              >
-              <hr />
-              <a @click="$router.push('/login')">Já possuo uma conta</a>
-            </div>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+            <hr style="opacity: 0.2" />
+            <small>Já tenho uma conta:</small>
+            <v-btn
+              :disabled="loading"
+              color="primary"
+              @click="$router.push('/login')"
+              >Login</v-btn
+            >
+          </div>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 import Notify from "~/plugins/Notify.js";
 export default {
   auth: "guest",
-  layout: "clean",
+  layout: "logoLayout",
   data() {
     return {
       loading: false,
@@ -96,11 +106,7 @@ export default {
 };
 </script>
 
-<style>
-#card {
-  margin: 0 auto;
-}
-
+<style scoped>
 #footer {
   display: flex;
   flex-direction: column;
@@ -109,5 +115,11 @@ export default {
 
 #footer hr {
   margin: 10px 0;
+}
+
+@media (max-width: 950px) {
+  #card {
+    margin: 0 auto;
+  }
 }
 </style>
