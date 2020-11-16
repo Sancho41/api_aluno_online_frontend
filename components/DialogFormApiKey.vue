@@ -10,17 +10,21 @@
       <v-card :loading="loading">
         <v-card-title>Gerar Chave de API</v-card-title>
         <v-card-text>
+          <input style="display: none" />
           <v-text-field
             :disabled="loading"
-            label="Matrícula"
+            placeholder="Matrícula"
             hint="Sua matrícula do Aluno Online"
             :persistent-hint="true"
             v-model="generateForm.matricula"
             @keyup.enter="gerar"
+            autocomplete="new-password"
           />
+
+          <input style="display: none" />
           <v-text-field
             :disabled="loading"
-            label="Senha"
+            placeholder="Senha"
             hint="Sua senha do Aluno Online"
             :persistent-hint="true"
             v-model="generateForm.senha"
@@ -28,6 +32,7 @@
             @click:append="showPassword = !showPassword"
             :type="showPassword ? 'text' : 'password'"
             @keyup.enter="gerar"
+            autocomplete="new-password"
           />
         </v-card-text>
         <v-card-actions>
