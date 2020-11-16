@@ -50,24 +50,25 @@
 
       <div class="infos">
         <div class="info-text-container">
-          <h3 class="info-title">Teste</h3>
+          <h3 class="info-title">Segurança</h3>
           <p class="info-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut
-            labore pariatur rerum.
+            A <strong>APIAlunoOnline</strong> garante ao usuário uma ótima
+            segurança em relação às suas credenciais devido ao seu sistema de
+            criptografia de senhas.
           </p>
         </div>
         <div class="info-text-container">
-          <h3 class="info-title">Teste</h3>
+          <h3 class="info-title">Padrão REST</h3>
           <p class="info-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut
-            labore pariatur rerum.
+            Crie sua própria aplicação ou automação utilizando a
+            <strong>APIAlunoOnline</strong>.
           </p>
         </div>
         <div class="info-text-container">
-          <h3 class="info-title">Teste</h3>
+          <h3 class="info-title">Open Source</h3>
           <p class="info-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut
-            labore.
+            Você também pode contribuir criando <i>pull requests</i> através do
+            <a href="https://github.com/Sancho41/api_aluno_online">Github</a>.
           </p>
         </div>
       </div>
