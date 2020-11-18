@@ -4,6 +4,22 @@
       <v-col>
         <v-card>
           <v-card-title>Instruções:</v-card-title>
+          <v-card-text>
+            <p>Essa aplicação utiliza de autenticação por JWT.</p>
+            <p>
+              Para mais detalhes acesse a
+              <a href="https://documenter.getpostman.com/view/10262250/TVep97qn"
+                >Documentação</a
+              >.
+            </p>
+            <p>
+              <h2>Atenção!</h2>
+              <strong>
+                Após gerar a chave, você deverá guardar a mesma. Caso
+                for perdida, será necessário criar uma nova chave.
+              </strong>
+            </p>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
